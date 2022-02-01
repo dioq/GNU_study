@@ -1,3 +1,3 @@
 git add .
-git commit -m "ptrace  tcho"
+git commit -m "$1"
 git push
