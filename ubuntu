@@ -1,11 +1,11 @@
-Ubuntu 常用命令
+# Ubuntu 常用命令
 
 ## apt 使用
 列出已安装软件包
 apt list --installed
 
 apt 删除已经安装的软件包：
-apt-get purge / apt-get --purge remove          删除已安装包（不保留配置文件)。如软件包a,依赖软件包b,则执行该命令会删除a,而且不保留配置文件
+apt-get purge / apt-get --purge remove          删除已安装包(不保留配置文件)。如软件包a,依赖软件包b,则执行该命令会删除a,而且不保留配置文件
 apt-get autoremove                              删除为了满足依赖而安装的,但现在不再需要的软件包（包括已安装包）,保留配置文件。
 apt-get remove                                  删除已安装的软件包（保留配置文件）,不会删除依赖软件包,且保留配置文件。
 apt-get autoclean                               APT的底层包是dpkg, 而dpkg 安装Package时, 会将 *.deb 放在 /var/cache/apt/archives/中,apt-get autoclean 只会删除 /var/cache/apt/archives/ 已经过期的deb。
@@ -25,21 +25,7 @@ dpkg -r package_name卸载
 dpkg --purge to remove package_name
 
 
-## 自带压缩软件的使用
-tar
-解压参数说明:
--c : 新建一个备份文档
--v : 显示详细信息
--p : 保存权限,并应用到所有文件
--z : 使用 gzip 压缩
--j : 使用 bzip2 压缩
--f : 指定备份文件的路径
--x :  解开一个压缩文件的参数指令
--exclude: 排除指定目录,不进行备份
--C : --directory DIR 转到指定的目录
-
-
-## 多线程优化 tar 速度
+## pigz 多线程优化 tar 速度
 使用 pigz多线程提高压缩和解压速度 (sudo apt install pigz)
 ## 压缩
 sudo tar --use-compress-program=pigz -cvpf  backup.tar.gz  --exclude=/proc --exclude=/sys --exclude=/run --exclude=/mnt --exclude=/tmp --exclude=/media --exclude=/lost+found --exclude=/etc/fstab --exclude=/boot/grub/grub.cfg /

@@ -13,7 +13,7 @@ cp /restore/etc/fstab /tmp
 若有/etc/fstab.d 就一并复制
 注: 我这里是保存到 /tmp,最好是直接保存到移动磁盘里.移动硬盘挂载的文件地址(/media/....)
 ### 2.3 把备份系统的压缩文件解压
-sudo tar -zxvf backup.tar.gz -C /restore
+sudo tar -xzvpf backup.tar.gz -C /restore
 ### 2.4 还原目标系统分区相关文件
 cp grub.cfg /restore/boot/grub/
 cp fstab /restore/etc/
@@ -35,7 +35,7 @@ mkdir restore  				# 创建临时挂载文件
 df -h  						# 查看分区,找出根目录/ 所挂载的磁盘分区
 mount /dev/sdaX /restore  	# 假定原有系统在磁盘分区/dev/sdaX上
 ## 解压
-sudo tar -zxvf backup.tar.gz -C /restore
+sudo tar -xzvpf backup.tar.gz -C /restore
 ## 引导修复
 sudo boot-repair
 

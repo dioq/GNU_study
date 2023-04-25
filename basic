@@ -1,0 +1,33 @@
+# 基础命令
+
+## 运行程序
+后台运行
+./xxx &
+退出 terminal 的时候继续运行进程,则需要使用nohup忽略hangup信号
+nohup ./test.sh &
+
+
+## ls 显示文件
+参数:
+-l	显示属性
+-a	显示信息
+如:
+ls ./test		    # 显示 ./test 目录下可见文件名
+ls ./test -l		# 显示 ./test 目录下可见文件名和属性
+ls ./test -la	    # 显示 ./test 目录下所有可见文件名和属性
+
+
+## grep 过滤
+ls ./test/ | grep *.txt         # 过虑 ./test 目录下 后缀为txt的文件
+
+
+## 进程操作
+ps -A 						// 显示进程信息
+ps -u root 					// 显示root进程用户信息
+ps -ef 						// 显示所有命令，连带命令行
+ps -ef | grep "name"		// 过滤进程
+ps -x       				// 查看属于自己的进程
+kill -9 <pid>				// 杀死进程
+
+## wget下载(wget后跟下载链接)
+wget https://1.na.dl.wireshark.org/win64/Wireshark-win64-3.2.4.exe
