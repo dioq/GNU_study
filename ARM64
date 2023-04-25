@@ -1,0 +1,30 @@
+ARM64 Linux
+
+在Linux下系统调用是用软中断实现的,在使用软中断进行系统调时，系统调用号通过x8寄存器传递，用svc指令产生软中断，实现从用户模式到root模式的切换。
+例如:
+mov x0, 123 // exit code
+mov x8, 93  // sys_exit() is at index 93 in kernel functions table
+svc #0      // generate kernel call sys_exit(123);
+
+
+SVC 超级用户调用
+语法
+SVC{cond} #immed
+其中：
+cond	是一个可选的条件代码（请参阅条件执行）。 
+immed 	是一个表达式，其取值为以下范围内的一个整数:
+		在 ARM 指令中为 0 到 224–1（24 位值）
+		在 16 位 Thumb 指令中为 0-255（8 位值）。
+
+用法
+SVC 指令会引发一个异常。 这意味着处理器模式会更改为超级用户模式，CPSR 会保存到超级用户模式 SPSR，并且执行会跳转到 SVC 向量（请参阅《开发指南》中的第 6 章 处理处理器异常）。
+处理器会忽略 immed。 但异常处理程序会获取它，借以确定所请求的服务。 
+
+作为 ARM 汇编语言开发成果的一部分，SWI 指令已重命名为 SVC。 在此版本的 RVCT 中，SWI 指令反汇编为 SVC，并提供注释以指明这是以前的 SWI。 
+
+条件标记
+此指令不更改标记。 
+体系结构
+此 ARM 指令可用于所有版本的 ARM 体系结构。
+在基于ARM的Linux中，异常向量表已经被放置在了0xFFFF0000这个位置
+
