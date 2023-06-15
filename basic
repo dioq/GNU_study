@@ -47,3 +47,20 @@ kill -9 <pid>				// 杀死进程
 
 ## wget下载(wget后跟下载链接)
 wget https://1.na.dl.wireshark.org/win64/Wireshark-win64-3.2.4.exe
+
+
+## 软件链接
+创建软链接
+ln  -s  [源文件或目录]  [目标文件或目录]
+例如：
+当前路径创建test 引向/var/www/test 文件夹 
+ln –s  /var/www/test  test
+创建/var/test 引向/var/www/test 文件夹 
+ln –s  /var/www/test   /var/test 
+
+删除软链接
+和删除普通的文件是一眼的，删除都是使用rm来进行操作
+rm –rf 软链接名称
+例如：
+删除test
+rm –rf test
