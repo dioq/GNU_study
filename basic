@@ -40,7 +40,7 @@ ls ./test/ | grep *.txt         # 过虑 ./test 目录下 后缀为txt的文件
 ## 进程操作
 ps -A 						// 显示进程信息
 ps -u root 					// 显示root进程用户信息
-ps -ef 						// 显示所有命令，连带命令行
+ps -ef 						// 显示所有命令,连带命令行
 ps -ef | grep "name"		// 过滤进程
 ps -x       				// 查看属于自己的进程
 kill -9 <pid>				// 杀死进程
@@ -54,13 +54,13 @@ wget https://1.na.dl.wireshark.org/win64/Wireshark-win64-3.2.4.exe
 ln  -s  [源文件或目录]  [目标文件或目录]
 例如：
 当前路径创建test 引向/var/www/test 文件夹 
-ln –s  /var/www/test  test
+ln -s  /var/www/test  test
 创建/var/test 引向/var/www/test 文件夹 
-ln –s  /var/www/test   /var/test 
+ln -s  /var/www/test   /var/test 
 
 删除软链接
-和删除普通的文件是一眼的，删除都是使用rm来进行操作
-rm –rf 软链接名称
+和删除普通的文件是一眼的,删除都是使用rm来进行操作
+rm -rf 软链接名称
 例如：
 删除test
-rm –rf test
+rm -rf test
