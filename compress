@@ -17,6 +17,14 @@ tar -czvpf test.tar.gz ./dir/ ./dir2/test.txt
 解压缩例子:
 tar -xzvpf test.tar.gz -C ./dir/
 
+## pigz 多线程优化 tar 速度
+使用 pigz多线程提高压缩和解压速度 (sudo apt install pigz)
+## 压缩
+sudo tar --use-compress-program=pigz -cvpf  backup.tar.gz  --exclude=/proc --exclude=/sys --exclude=/run --exclude=/mnt --exclude=/tmp --exclude=/media --exclude=/lost+found --exclude=/etc/fstab --exclude=/boot/grub/grub.cfg /
+## 解压
+sudo tar --use-compress-program=pigz -xvpf  backup.tar.gz -C /
+
+
 ## zip
 参数:
 -r			                     # 递归

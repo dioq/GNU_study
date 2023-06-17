@@ -23,11 +23,3 @@ dpkg -l *fox*即可
 查到以后,可以运行
 dpkg -r package_name卸载
 dpkg --purge to remove package_name
-
-
-## pigz 多线程优化 tar 速度
-使用 pigz多线程提高压缩和解压速度 (sudo apt install pigz)
-## 压缩
-sudo tar --use-compress-program=pigz -cvpf  backup.tar.gz  --exclude=/proc --exclude=/sys --exclude=/run --exclude=/mnt --exclude=/tmp --exclude=/media --exclude=/lost+found --exclude=/etc/fstab --exclude=/boot/grub/grub.cfg /
-## 解压
-sudo tar --use-compress-program=pigz -xvpf  backup.tar.gz -C /

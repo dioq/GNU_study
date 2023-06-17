@@ -43,8 +43,10 @@ sudo boot-repair
 /************************************ 不保存直接修改配置文件(这种方法我没试验成功) *****************************************/
 系统启动文件配置
 把新硬盘的/boot/grub/grup.cfg里面的uuid替换掉
-如果没有把boot单独分区，那么只要将里面的uuid全部改成新硬盘的uuid,（考虑启动过程没有其他挂载的情况）。如果是单独分区的话，注意这个文件下还有boot的uuid的值（我的硬盘没有boot单独分区）。
-uuid查询方法:1. sudo blkid ; 2. ls -l /dev/disk/by-uuid
+如果没有把boot单独分区,那么只要将里面的uuid全部改成新硬盘的uuid,(考虑启动过程没有其他挂载的情况)。如果是单独分区的话,注意这个文件下还有boot的uuid的值(我的硬盘没有boot单独分区)。
+uuid查询方法:
+1. sudo blkid
+2. ls -l /dev/disk/by-uuid
 sudo vim /boot/grub/grub.cfg
 
 %s /uuid_old/uuid_new/g
