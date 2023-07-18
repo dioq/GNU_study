@@ -23,3 +23,6 @@ dpkg -l *fox*即可
 查到以后,可以运行
 dpkg -r package_name卸载
 dpkg --purge to remove package_name
+
+## cli 打开文件夹
+nautilus [dir path]
