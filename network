@@ -2,7 +2,7 @@
 
 ## 防火墙常用命令
 1.查看防火墙状态：
-firewall-cmd --state 
+firewall-cmd --state
 2.启动防火墙
 systemctl start firewalld
 3.关闭防火墙
@@ -21,7 +21,6 @@ systemctl enable firewalld.service
 firewall-cmd --zone=public --remove-port=9200/tcp --permanent
 (注:开放端口或取消端口后,重要重启防火墙)
 
-
 ## port操作
 查看已经连接的服务端口（ESTABLISHED）
 netstat -a
@@ -34,7 +33,6 @@ lsof -i:8080
 还有一个比较好用的命令，查看**端口：
 netstat -lnp | grep 8080
 若要关闭使用这个端口的程序，使用kill + 对应的pid
-
 
 # 扫描开放的port
 nmap  www.anant.club
