@@ -1,6 +1,7 @@
 # Ubuntu 常用命令
 
 ## apt 使用
+
 列出已安装软件包
 apt list --installed
 
@@ -11,8 +12,8 @@ apt-get remove                                  删除已安装的软件包（�
 apt-get autoclean                               APT的底层包是dpkg, 而dpkg 安装Package时, 会将 *.deb 放在 /var/cache/apt/archives/中,apt-get autoclean 只会删除 /var/cache/apt/archives/ 已经过期的deb。
 apt-get clean                                   使用 apt-get clean 会将 /var/cache/apt/archives/ 的 所有 deb 删掉,可以理解为 rm /var/cache/apt/archives/*.deb
 
+## 通过deb包安装软件
 
-## 通过deb包安装软件:
 dpkg -i package_file.deb
 卸载:
 dpkg -r package_name
@@ -25,4 +26,5 @@ dpkg -r package_name卸载
 dpkg --purge to remove package_name
 
 ## cli 打开文件夹
+
 nautilus [dir path]

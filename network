@@ -1,6 +1,7 @@
 # 网络相关
 
 ## 防火墙常用命令
+
 1.查看防火墙状态：
 firewall-cmd --state
 2.启动防火墙
@@ -22,6 +23,7 @@ firewall-cmd --zone=public --remove-port=9200/tcp --permanent
 (注:开放端口或取消端口后,重要重启防火墙)
 
 ## port操作
+
 查看已经连接的服务端口（ESTABLISHED）
 netstat -a
 查看所有的服务端口（LISTEN，ESTABLISHED）
@@ -34,9 +36,14 @@ lsof -i:8080
 netstat -lnp | grep 8080
 若要关闭使用这个端口的程序，使用kill + 对应的pid
 
-# 扫描开放的port
-nmap  www.anant.club
-# 监测外部ip地址的流量
+## 扫描开放的port
+
+nmap  <www.anant.club>
+
+## 监测外部ip地址的流量
+
 iftop
-# 追踪所访问的网站经过多少设备
-traceroute -n www.anant.club
+
+## 追踪所访问的网站经过多少设备
+
+traceroute -n <www.anant.club>

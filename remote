@@ -31,11 +31,11 @@ ssh -o ServerAliveInterval=60 [root@jobs8.cn] -p 22
 1. 上传
 scp -r [filepath] [username]@[ip]:[directory]
 如:
-scp -r ./test.txt [root@jobs8.cn]:/tmp
+scp -r ./test.txt root@jobs8.cn:/tmp
 2. 下载
 scp -r [username]@[ip]:[filepath] [directory]
 如:
-scp -r [root@jobs8.cn]:/tmp/test.txt ./
+scp -r root@jobs8.cn:/tmp/test.txt ./
 3. 指定端口 -P [port] (是大写的P)如:
-scp -P 2222 -r ./test.txt [root@jobs8.cn]:/tmp
+scp -P 2222 -r ./test.txt root@jobs8.cn:/tmp
 注:如果不指定端口,则默认端口是 22
