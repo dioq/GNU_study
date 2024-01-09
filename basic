@@ -45,7 +45,7 @@ ps -ef | grep "name"		// 过滤进程
 ps -x       				// 查看属于自己的进程
 kill -9 <pid>				// 杀死进程
 
-## wget下载(wget后跟下载链接)
+## wget下载
 -c      支持断点续传
 wget -c https://1.na.dl.wireshark.org/win64/Wireshark-win64-3.2.4.exe
 
