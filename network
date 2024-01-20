@@ -38,7 +38,7 @@ netstat -lnp | grep 8080
 
 ## 扫描开放的port
 
-nmap  <www.anant.club>
+nmap jobs8.cn
 
 ## 监测外部ip地址的流量
 

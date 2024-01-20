@@ -11,6 +11,10 @@ nohup ./test.sh &
 options:
 -l	显示属性
 -a	显示信息
+-S  sort by file size   (默认由大到小)
+-t  sort by create time (默认由大到小)
+-r  是reverse的简写,表示反转
+
 如:
 ls ./test		    # 显示 ./test 目录下可见文件名
 ls ./test -l		# 显示 ./test 目录下可见文件名和属性
@@ -37,13 +41,31 @@ options:
 ls ./test/ | grep *.txt         # 过虑 ./test 目录下 后缀为txt的文件
 
 
-## 进程操作
-ps -A 						// 显示进程信息
-ps -u root 					// 显示root进程用户信息
-ps -ef 						// 显示所有命令,连带命令行
-ps -ef | grep "name"		// 过滤进程
-ps -x       				// 查看属于自己的进程
-kill -9 <pid>				// 杀死进程
+## ps 进程操作
+
+options:
+-A 显示所有进程(等价于-e)(utility)
+-a 显示一个终端的所有进程,除了会话引线
+-N 忽略选择。
+-d 显示所有进程,但省略所有的会话引线(utility)
+-x 显示没有控制终端的进程,同时显示各个命令的具体路径。dx不可合用。(utility)
+-p pid 进程使用cpu的时间
+-u uid or username 选择有效的用户id或者是用户名
+-g gid or groupname 显示组的所有进程。
+U username 显示该用户下的所有进程,且显示各个命令的详细路径。如:ps U zhang;(utility)
+-f 全部列出,通常和其他选项联用。如:ps -fa or ps -fx and so on.
+-l 长格式(有F,wchan,C 等字段)
+-j 作业格式
+-o 用户自定义格式。
+v 以虚拟存储器格式显示
+s 以信号格式显示
+-m 显示所有的线程
+-H 显示进程的层次(和其它的命令合用,如:ps -Ha)(utility)
+e 命令之后显示环境(如:ps -d e; ps -a e)(utility)
+
+常用组合
+ps aux
+
 
 ## wget下载
 -c      支持断点续传
