@@ -35,15 +35,3 @@ lsof -i:8080
 还有一个比较好用的命令,查看**端口:
 netstat -lnp | grep 8080
 若要关闭使用这个端口的程序,使用kill + 对应的pid
-
-## 扫描开放的port
-
-nmap jobs8.cn
-
-## 监测外部ip地址的流量
-
-iftop
-
-## 追踪所访问的网站经过多少设备
-
-traceroute -n jobs8.cn
