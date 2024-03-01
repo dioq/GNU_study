@@ -39,7 +39,7 @@ crontab -l      列出所有定时任务
 
 每分钟执行一次
 `* * * * * /bin/bash /home/zd/test/test.sh`
-每年 1,3,6,9,12 月份的 1 日 0 时 0分 执行1次
-`0 0 1 1,3,6,9,12 * certbot renew`
+每年 1,4,7,10 月份的 1 日 0 时 0分 执行1次
+`0 0 1 1,4,7,10 * certbot renew`
 每天 0 时 0分 执行1次
 0 0 1-31 * * kill -9 `pidof python3`
