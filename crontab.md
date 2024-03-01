@@ -2,9 +2,9 @@
 
 crontab命令是cron table的简写，它是cron的配置文件，也可以叫它作业列表。
 
-/var/spool/cron/        目录下存放的是每个用户包括root的crontab任务，每个任务以创建者的名字命名
-/etc/crontab            这个文件负责调度各种管理和维护任务。
-/etc/cron.d/            这个目录用来存放任何要执行的crontab文件或脚本。
+/var/spool/cron/            目录下存放的是每个用户包括root的crontab任务，每个任务以创建者的名字命名
+/etc/crontab                这个文件负责调度各种管理和维护任务。
+/etc/cron.d/                这个目录用来存放任何要执行的crontab文件或脚本。
 
 /etc/cron.hourly            每小时执行一次
 /etc/cron.daily             每天时执行一次
