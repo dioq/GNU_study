@@ -42,4 +42,4 @@ crontab -l      列出所有定时任务
 每年 1,4,7,10 月份的 1 日 0 时 0分 执行1次
 `0 0 1 1,4,7,10 * certbot renew`
 每天 0 时 0分 执行1次
-0 0 1-31 * * kill -9 `pidof python3`
+0 0 1-31 * * kill -9 `pgrep -f /home/zd/test/test.sh`
