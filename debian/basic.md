@@ -1,24 +1,25 @@
 # 基础命令
 
 ## 运行程序
+
 后台运行
 ./xxx &
 退出 terminal 的时候继续运行进程,则需要使用nohup忽略hangup信号
 nohup ./test.sh &
 
-
 ## ls 显示文件信息
+
 options:
--l	显示属性
--a	显示信息
+-l 显示属性
+-a 显示信息
 -S  sort by file size   (默认由大到小)
 -t  sort by create time (默认由大到小)
 -r  是reverse的简写,表示反转
 
 如:
-ls ./test		    # 显示 ./test 目录下可见文件名
-ls ./test -l		# 显示 ./test 目录下可见文件名和属性
-ls ./test -la	    # 显示 ./test 目录下所有可见文件名和属性
+ls ./test      # 显示 ./test 目录下可见文件名
+ls ./test -l  # 显示 ./test 目录下可见文件名和属性
+ls ./test -la     # 显示 ./test 目录下所有可见文件名和属性
 
 lsof                # (list open files) 查看进程打开的文件
 options:
@@ -38,21 +39,23 @@ options:
 -v 显示版本信息
 
 ## grep 过滤
+
 ls ./test/ | grep *.txt         # 过虑 ./test 目录下 后缀为txt的文件
 
 ## wget下载
--c      支持断点续传
-wget -c https://1.na.dl.wireshark.org/win64/Wireshark-win64-3.2.4.exe
 
+-c      支持断点续传
+wget -c <https://1.na.dl.wireshark.org/win64/Wireshark-win64-3.2.4.exe>
 
 ## 软件链接
+
 创建软链接
 ln  -s  [源文件或目录]  [目标文件或目录]
 例如:
-当前路径创建test 引向/var/www/test 文件夹 
+当前路径创建test 引向/var/www/test 文件夹
 ln -s  /var/www/test  test
-创建/var/test 引向/var/www/test 文件夹 
-ln -s  /var/www/test   /var/test 
+创建/var/test 引向/var/www/test 文件夹
+ln -s  /var/www/test   /var/test
 
 删除软链接
 和删除普通的文件是一眼的,删除都是使用rm来进行操作

@@ -17,7 +17,7 @@ ssh [username]@[ip]:[port]
 ssh [root@jobs8.cn] -p 22
 ssh [root@jobs8.cn]:22
 
-#### 连接保活
+### 连接保活
 
 ClientAliveInterval 60  # server 每隔 60 秒发送一次请求给 client,然后 client 响应,从而保持连接
 ClientAliveCountMax 3   # server 发出请求后,客户端没有响应得次数达到 3 就自动断开连接,正常情况下 client 不会不响应
@@ -31,11 +31,11 @@ ssh -o ServerAliveInterval=60 [root@jobs8.cn] -p 22
 1. 上传
 scp -r [filepath] [username]@[ip]:[directory]
 如:
-scp -r ./test.txt root@jobs8.cn:/tmp
+scp -r ./test.txt <root@jobs8.cn>:/tmp
 2. 下载
 scp -r [username]@[ip]:[filepath] [directory]
 如:
-scp -r root@jobs8.cn:/tmp/test.txt ./
+scp -r <root@jobs8.cn>:/tmp/test.txt ./
 3. 指定端口 -P [port] (是大写的P)如:
-scp -P 2222 -r ./test.txt root@jobs8.cn:/tmp
+scp -P 2222 -r ./test.txt <root@jobs8.cn>:/tmp
 注:如果不指定端口,则默认端口是 22
