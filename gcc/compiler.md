@@ -1,4 +1,4 @@
-# GCC
+# GCC 编译器
 
 options:
 -E                      预处理(preprocessing)
