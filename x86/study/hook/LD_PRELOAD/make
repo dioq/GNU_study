@@ -1,0 +1,5 @@
+gcc main.c -o main
+
+gcc -fPIC -shared -o hook.so hook.c -ldl
+
+LD_PRELOAD=./hook.so ./main 123

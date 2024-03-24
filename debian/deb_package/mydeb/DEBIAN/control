@@ -1,0 +1,12 @@
+Package: deb01
+Version: 1.0
+Architecture: all
+Maintainer: zhendong2011@live.cn
+Installed-Size: 128
+Recommends:
+Suggests:
+Section: devel
+Priority: optional
+Multi-Arch: foreign
+Description: just for test
+

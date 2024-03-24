@@ -1,0 +1,4 @@
+
+gcc -no-pie tracer.c -o tracer
+
+./tracer -p `pidof ./target` -f func11

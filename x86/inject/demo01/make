@@ -1,0 +1,4 @@
+gcc -no-pie inject.c -o main.out
+
+./main.out `pidof ./tracee`
+

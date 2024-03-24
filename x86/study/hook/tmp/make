@@ -1,0 +1,11 @@
+
+gcc -fPIC -shared test.c -o libtest.so
+
+# -l  选项告诉编译器要使用test这个库
+# -L. 告诉编译器在当前目录中查找库文件
+gcc -no-pie main.c -o main -L. -ltest
+
+#  把当前路径加入环境变量LD_LIBRARY_PATH中
+export LD_LIBRARY_PATH=.:$LD_LIBRARY_PATH
+
+./main

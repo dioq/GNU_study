@@ -1,4 +1,4 @@
-# Linux kernel 内核学习
+# Linux kernel
 
 ## 进程相关信息
 

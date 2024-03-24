@@ -1,0 +1,2 @@
+
+gcc -no-pie -static target.c -o target

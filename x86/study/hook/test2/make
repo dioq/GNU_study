@@ -1,0 +1,8 @@
+gcc -fPIC preload.c -shared -o preload.so -ldl
+
+gcc target.c -o target
+# -L. -lstrcmp
+
+export LD_LIBRARY_PATH=.:$LD_LIBRARY_PATH
+
+# ./target 123
